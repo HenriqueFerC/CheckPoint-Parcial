@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
 import EditarProdutos from './routes/EditarProdutos/index.jsx'
 import Produtos from './routes/Produtos/index.jsx'
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/produtos/editar/:id",
         element: <EditarProdutos/>
+      },
+      {
+        path: "/antiga",
+        element: <Navigate to="/"/>
       }
     ]
   }
